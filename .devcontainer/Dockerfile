@@ -8,7 +8,7 @@ ARG USER_GID=$USER_UID
 
 # Install git, process tools, lsb-release (common in install instructions for CLIs) and curl
 RUN apk --no-cache update && apk --no-cache upgrade && \
-    apk add --no-cache gcc musl-dev linux-headers libffi-dev bash zsh git curl sudo build-base openssh-client
+    apk add --no-cache gcc musl-dev linux-headers libffi-dev bash zsh git curl sudo build-base openssh-client vim sl onefetch neofetch bat
 
 # change default shell from bash to zsh
 RUN sed -i -e "s/bin\/ash/bin\/zsh/" /etc/passwd
